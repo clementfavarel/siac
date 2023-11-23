@@ -41,17 +41,17 @@ OS version : 22.04.3 LTS x86_64
 
 1. Cloner le dépôt git
     ```sh
-    git clone https://github.com/clementfavarel/sae5.1-siac.git
+    git clone https://github.com/clementfavarel/siac.git
     ```
     ou
     ```sh
-    git clone git@github.com:clementfavarel/sae5.1-siac.git
+    git clone git@github.com:clementfavarel/siac.git
     ```
-2. Importer le fichier `config/siac_dump.sql` dans le serveur MySQL/MariaDB
-3. Créez une copie du fichier `config.example.php` et nommez la `config.php`. Ensuite, configurez la connexion à la base de données dans le fichier `config.php` en suivant l'exemple de `config.example.php`
+2. Importer le fichier `src/database/dumps/dump.sql` dans le serveur MySQL/MariaDB
+3. Créez une copie du fichier `src/database/config/config.sample.php` et nommez la `config.php`. Ensuite, configurez la connexion à la base de données dans le fichier `src/database/config/config.php` en modifiant les variables de connexion
 4. Configurez votre serveur web pour qu'il utilise le dossier `src/` comme dossier racine
 5. Lancez votre serveur web et dirigez vous vers l'URL du site
 
 ## Utilisation
 
-[Lien vers le wiki](https://github.com/clementfavarel/sae5.1-siac/wiki)
+[Lien vers le wiki](https://github.com/clementfavarel/siac/wiki)
