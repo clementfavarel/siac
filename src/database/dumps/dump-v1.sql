@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 24, 2023 at 10:33 PM
+-- Generation Time: Nov 27, 2023 at 07:15 PM
 -- Server version: 10.6.12-MariaDB-0ubuntu0.22.04.1
 -- PHP Version: 8.1.2-1ubuntu2.14
 
@@ -43,7 +43,6 @@ CREATE TABLE `artiste` (
   `domaine` varchar(100) NOT NULL,
   `presentation` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL,
-  `num_stand` int(11) NOT NULL,
   `photo_url` varchar(255) NOT NULL,
   `interview_url` varchar(255) NOT NULL,
   `genre_id` int(11) NOT NULL
@@ -90,6 +89,17 @@ CREATE TABLE `reaction` (
   `id` int(11) NOT NULL,
   `oeuvre_id` int(11) NOT NULL,
   `utilisateur_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `stand`
+--
+
+CREATE TABLE `stand` (
+  `id` int(11) NOT NULL,
+  `oeuvre_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -144,6 +154,13 @@ ALTER TABLE `reaction`
   ADD KEY `reaction_utilisateur_fk` (`utilisateur_id`);
 
 --
+-- Indexes for table `stand`
+--
+ALTER TABLE `stand`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `stand_oeuvre_fk` (`oeuvre_id`);
+
+--
 -- Indexes for table `utilisateur`
 --
 ALTER TABLE `utilisateur`
@@ -178,6 +195,12 @@ ALTER TABLE `reaction`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `stand`
+--
+ALTER TABLE `stand`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `utilisateur`
 --
 ALTER TABLE `utilisateur`
@@ -206,6 +229,12 @@ ALTER TABLE `oeuvre`
 ALTER TABLE `reaction`
   ADD CONSTRAINT `reaction_oeuvre_fk` FOREIGN KEY (`oeuvre_id`) REFERENCES `oeuvre` (`id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `reaction_utilisateur_fk` FOREIGN KEY (`utilisateur_id`) REFERENCES `utilisateur` (`id`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `stand`
+--
+ALTER TABLE `stand`
+  ADD CONSTRAINT `stand_oeuvre_fk` FOREIGN KEY (`oeuvre_id`) REFERENCES `oeuvre` (`id`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
