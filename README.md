@@ -38,16 +38,14 @@ Elle se présente sous plusieurs onglets :
 
 Version 1.0
 
-OS : Linux Ubuntu
-OS version : 22.04.3 LTS x86_64
+Docker Container : [clementfavarel/siac](https://hub.docker.com/repository/docker/clementfavarel/siac)
 
 ## Installation
 
 ### Prérequis (+ Version utilisée)
 
--   Apache web server (used 2.4.52)
--   MySQL/MariaDB (used 10.6.12)
--   PHP (used 8.2)
+-   Docker (version 24.0.7 utilisée)
+-   docker-compose 1.29.2 (version 1.29.2 utilisée)
 
 ### Installation
 
