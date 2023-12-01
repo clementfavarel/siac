@@ -64,4 +64,10 @@ Docker Container : [clementfavarel/siac](https://hub.docker.com/repository/docke
 
 ## Utilisation
 
+**Start Docker Container**
+
+```sh
+sudo docker compose up
+```
+
 [Lien vers le wiki](https://github.com/clementfavarel/siac/wiki)
