@@ -116,8 +116,7 @@ CREATE TABLE `utilisateur` (
   `mdp` varchar(60) NOT NULL,
   `tranche_age` varchar(5) NOT NULL,
   `departement` varchar(50) NOT NULL,
-  `metier` varchar(50) NOT NULL,
-  `photo_url` varchar(255) NOT NULL
+  `metier` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
