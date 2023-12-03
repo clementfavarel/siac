@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
 *,
 *::before,
 *::after {
@@ -6,10 +7,12 @@
     margin: 0;
     padding: 0;
 }
+
 html,
 body {
     height: 100%;
 }
+
 :root {
     --font-family: "Inter", sans-serif;
     --font-size: 16px;
@@ -21,8 +24,10 @@ body {
     --dark: #010101;
     --darkgrey: #333;
     --white: #fcfcfc;
-    --primary: #e88bb2;
+    --primary: #E88BB2;
+    --secondary: #E8B6CB;
 }
+
 body {
     font-family: var(--font-family);
     font-size: var(--font-size);
@@ -36,16 +41,19 @@ label {
     text-indent: 10px;
     margin-bottom: 0.5rem;
 }
+
 input {
     margin-bottom: 1rem;
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 input:focus {
     outline: none;
     border: 1px solid var(--primary);
 }
+
 a,
 .link {
     border: none;
@@ -54,39 +62,35 @@ a,
     text-decoration: none;
     color: var(--primary);
 }
+
 a:hover,
 .link:hover {
     text-decoration: underline;
 }
+
 .btn {
-    outline: none;
-    display: block;
-    width: fit-content;
     font-family: var(--font-family);
     font-size: var(--font-size);
     font-weight: 600;
+    width: 12rem;
     color: var(--white);
-    background-color: var(--primary);
     padding: 0.5rem 1rem;
-    border: 1px solid var(--primary);
-    border-radius: 8px;
+    border-radius: 22px;
     cursor: pointer;
+    text-align: center;
+    margin: 0 auto;
 }
+
 .btn:hover {
     color: var(--primary);
     background-color: var(--white);
     text-decoration: none;
 }
-.center {
-    margin: 0 auto;
+
+.primary {
+    background-color: var(--primary);
 }
-.credits {
-    color: var(--dark);
-    position: fixed;
-    bottom: 16px;
-    left: 50%;
-    transform: translate(-50%);
-    font-size: 0.75rem;
-    font-weight: var(--light);
-    white-space: nowrap;
+
+.secondary {
+    background-color: var(--secondary);
 }
