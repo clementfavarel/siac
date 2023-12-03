@@ -81,16 +81,19 @@ a:hover,
     margin: 0 auto;
 }
 
-.btn:hover {
-    color: var(--primary);
-    background-color: var(--white);
-    text-decoration: none;
-}
-
 .primary {
     background-color: var(--primary);
+    border: 1px solid var(--primary);
 }
 
 .secondary {
     background-color: var(--secondary);
+    border: 1px solid var(--secondary);
+}
+
+.previous-page-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 30px;
 }
