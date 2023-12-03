@@ -1,10 +1,8 @@
 <?php
-// session_start();
-// if (!isset($_SESSION['user'])) {
-//     header("Location: src/interfaces/pages/auth/register.php");
-// } else {
-//     header("Location: src/interfaces/pages/map/");
-// }
+session_start();
+if (isset($_SESSION['user'])) {
+    header("Location: src/interfaces/pages/map/");
+}
 ?>
 
 <!DOCTYPE html>

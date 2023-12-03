@@ -32,15 +32,34 @@ body {
     background-color: var(--white);
 }
 
-a {
+label {
+    text-indent: 10px;
+    margin-bottom: 0.5rem;
+}
+input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+input:focus {
+    outline: none;
+    border: 1px solid var(--primary);
+}
+a,
+.link {
+    border: none;
+    background-color: transparent;
     cursor: pointer;
     text-decoration: none;
     color: var(--primary);
 }
-a:hover {
+a:hover,
+.link:hover {
     text-decoration: underline;
 }
 .btn {
+    outline: none;
     display: block;
     width: fit-content;
     font-family: var(--font-family);
@@ -51,6 +70,7 @@ a:hover {
     padding: 0.5rem 1rem;
     border: 1px solid var(--primary);
     border-radius: 8px;
+    cursor: pointer;
 }
 .btn:hover {
     color: var(--primary);
