@@ -31,16 +31,18 @@
 <body>
     <div class="container">
         <div class="content">
-            <h1 class="title text-center">visitez le siac avec</h1>
             <div class="column">
-                <!-- <img src="src/assets/img/logo-siac.svg" alt="SIAC 2024" class="logo-siac" /> -->
+                <img src="src/assets/img/logo-siac.svg" alt="SIAC 2024" class="logo-siac" />
                 <img src="src/assets/img/logo-mapollon.svg" alt="MAPOLLON" />
             </div>
-            <p class="text-justify">
-                Arpentez le salon à travers un parcours sur les artistes engagés,
-                avec de la Réalité Augmentée, des interviews personnalisées,
-                des ambiances sonores et plus encore !
-            </p>
+            <div class="text">
+                <h1 class="title text-center">visitez le siac avec mapollon</h1>
+                <p class="text-center">
+                    Arpentez le salon à travers un parcours sur les artistes engagés,
+                    avec de la Réalité Augmentée, des interviews personnalisées,
+                    des ambiances sonores et plus encore !
+                </p>
+            </div>
             <div class="column">
                 <a href="src/interfaces/pages/auth/login.php" class="btn center primary">Se connecter</a>
                 <a href="src/interfaces/pages/auth/register.php" class="center">Créer un compte</a>
