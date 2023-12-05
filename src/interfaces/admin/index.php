@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION['admin'])) {
+    header("Location: ./dashboard");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
