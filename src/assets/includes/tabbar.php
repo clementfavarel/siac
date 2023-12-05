@@ -23,7 +23,6 @@
     nav {
         position: fixed;
         width: 80%;
-        height: 60px;
         bottom: 16px;
         left: 50%;
         transform: translateX(-50%);
