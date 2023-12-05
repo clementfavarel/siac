@@ -12,12 +12,8 @@ if (!isset($_SESSION['user'])) {
 <head>
     <title>Profil | Mapollon</title>
     <?php include('../../../assets/includes/head.php'); ?>
-
-    <style>
-        body {
-            background-color: #333;
-        }
-    </style>
+    <link rel="stylesheet" href="../../../assets/css/global.css" />
+    <link rel="stylesheet" href="./profile.css" />
 </head>
 
 <body>
