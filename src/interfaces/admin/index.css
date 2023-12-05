@@ -1,0 +1,28 @@
+body {
+    background-color: #333;
+}
+.card {
+    width: 90%;
+    max-width: 380px;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+}
+label {
+    display: block;
+}
+input {
+    width: 100%;
+}
+input:focus {
+    outline: none;
+    border: 1px solid var(--dark);
+}
+.btn {
+    display: block;
+    margin: 1.5rem auto;
+}
+.dark {
+    background-color: var(--dark);
+    border: 1px solid var(--dark);
+}
