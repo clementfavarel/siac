@@ -76,7 +76,7 @@ $artists = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <td><?= $artist['interview_url'] ?></td>
                         <td><?= $artist['genre_id'] ?></td>
                         <td>
-                            <a href="./update.php?id=<?= $artist['id'] ?>">Modifier</a>
+                            <a href="./modify.php?id=<?= $artist['id'] ?>">Modifier</a>
                             <a href="./delete.php?id=<?= $artist['id'] ?>">Supprimer</a>
                         </td>
                     </tr>
