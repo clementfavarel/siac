@@ -1,14 +1,9 @@
 <?php
 session_start();
-
-/*
-TODO : Check if all steps are built accordingly to the database table utilisateur
-* 1. firstname, lastname
-* 2. job, email
-* 3. birth, living place
-* 4. password and confirm
-! make sure photo_url isn't in the db anymore
-*/
+if (isset($_SESSION['user'])) {
+    header('Location: ../../index.php');
+    exit();
+}
 ?>
 
 <!DOCTYPE html>

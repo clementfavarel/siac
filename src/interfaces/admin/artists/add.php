@@ -26,7 +26,7 @@ if (!isset($_SESSION['admin'])) {
         </div>
         <div class="container">
             <h1>Inscription</h1>
-            <form method="post" id="ArtistsForm" action="controllers/artists.contr.php">
+            <form method="post" id="ArtistsForm" action="controllers/add.contr.php">
                 <!-- One "Index" for each step in the form: -->
                 <div class="index">
                     <label for="firstname">Prénom</label>
