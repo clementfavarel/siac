@@ -3,6 +3,13 @@ session_start();
 if (!isset($_SESSION['admin'])) {
     header("Location: ../index.php");
 }
+
+include_once('../../../database/config/config.php');
+$sql = "SELECT * FROM artiste WHERE id = :id";
+$stmt = $db->prepare($sql);
+$stmt->bindValue(':id', $_GET['id']);
+$stmt->execute();
+$artist = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +17,7 @@ if (!isset($_SESSION['admin'])) {
 
 <head>
     <?php include('../../../assets/includes/head.php'); ?>
-    <title>Ajouter un artiste | Admin</title>
+    <title>Modifier un artiste | Admin</title>
     <link rel="stylesheet" href="../../../assets/css/global.css" />
     <link rel="stylesheet" href="./assets/css/add.css" />
 </head>
@@ -26,15 +33,15 @@ if (!isset($_SESSION['admin'])) {
         </div>
         <div class="container">
             <h1>Inscription</h1>
-            <form method="post" id="ArtistsForm" action="controllers/add.contr.php">
+            <form method="post" id="ArtistsForm" action="controllers/modify.contr.php">
                 <!-- One "Index" for each step in the form: -->
                 <div class="index">
                     <label for="firstname">Prénom</label>
-                    <input oninput="this.className = ''" name="firstname" />
+                    <input oninput="this.className = ''" name="firstname" value="<?= $artist['prenom'] ?>" />
                     <label for="lastname">Nom</label>
-                    <input oninput="this.className = ''" name="lastname" />
+                    <input oninput="this.className = ''" name="lastname" value="<?= $artist['nom'] ?>" />
                     <label for="pseudo">Pseudo</label>
-                    <input oninput="this.className = ''" name="pseudo" />
+                    <input oninput="this.className = ''" name="pseudo" value="<?= $artist['pseudo'] ?>" />
                 </div>
                 <div class="index">
                     <label for="genre">Genre</label>
@@ -46,39 +53,39 @@ if (!isset($_SESSION['admin'])) {
                         <option value="5">Mosaïque</option>
                     </select>
                     <label for="email">Email</label>
-                    <input type="email" oninput="this.className = ''" name="email" />
+                    <input type="email" oninput="this.className = ''" name="email" value="<?= $artist['email'] ?>" />
                     <label for="tel">Téléphone</label>
-                    <input type="text" oninput="this.className = ''" name="tel" />
+                    <input type="text" oninput="this.className = ''" name="tel" value="<?= $artist['telephone'] ?>" />
                 </div>
                 <div class="index">
                     <label for="web">Lien site web</label>
-                    <input type="text" oninput="this.className = ''" name="web" />
+                    <input type="text" oninput="this.className = ''" name="web" value="<?= $artist['web'] ?>" />
                     <label for="fb">Lien facebook</label>
-                    <input type="text" oninput="this.className = ''" name="fb" />
+                    <input type="text" oninput="this.className = ''" name="fb" value="<?= $artist['facebook'] ?>" />
                     <label for="insta">Lien instagram</label>
-                    <input type="text" oninput="this.className = ''" name="insta" />
+                    <input type="text" oninput="this.className = ''" name="insta" value="<?= $artist['instagram'] ?>" />
                 </div>
                 <div class="index">
                     <label for="adresse">Numéro et Rue</label>
-                    <input type="text" oninput="this.className = ''" name="adresse" />
+                    <input type="text" oninput="this.className = ''" name="adresse" value="<?= $artist['adresse'] ?>" />
                     <label for="ville">Ville</label>
-                    <input type="text" oninput="this.className = ''" name="ville" />
+                    <input type="text" oninput="this.className = ''" name="ville" value="<?= $artist['ville'] ?>" />
                     <label for="codepostal">Code Postal</label>
-                    <input type="number" oninput="this.className = ''" name="codepostal" />
+                    <input type="number" oninput="this.className = ''" name="codepostal" value="<?= $artist['code_postal'] ?>" />
                 </div>
                 <div class="index">
                     <label for="domaine">Genre d'art</label>
-                    <input type="text" oninput="this.className = ''" name="domaine" placeholder="impressionisme, surréalisme, abstrait..." />
+                    <input type="text" oninput="this.className = ''" name="domaine" value="<?= $artist['domaine'] ?>" />
                     <label for="pres">Présentation</label>
-                    <input type="text" oninput="this.className = ''" name="pres" />
+                    <input type="text" oninput="this.className = ''" name="pres" value="<?= $artist['presentation'] ?>" />
                     <label for="description">Description</label>
-                    <input type="text" oninput="this.className = ''" name="description" />
+                    <input type="text" oninput="this.className = ''" name="description" value="<?= $artist['description'] ?>" />
                 </div>
                 <div class="index">
                     <label for="photo_url">Photo url</label>
-                    <input type="text" oninput="this.className = ''" name="photo_url" placeholder="lien google drive" />
+                    <input type="text" oninput="this.className = ''" name="photo_url" value="<?= $artist['photo_url'] ?>" />
                     <label for="itw_url">Interview url</label>
-                    <input type="text" oninput="this.className = ''" name="itw_url" placeholder="lien youtube" />
+                    <input type="text" oninput="this.className = ''" name="itw_url" value="<?= $artist['iterview_url'] ?>" />
                 </div>
                 <!-- Circles which indicates the steps of the form: -->
                 <div class="dots">

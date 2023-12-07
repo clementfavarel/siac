@@ -18,6 +18,15 @@ h1 {
     margin-bottom: 1.5rem;
 }
 
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
 input {
     margin-bottom: 1rem;
+}
+.center {
+    display: block;
+    margin: 1.5rem auto 0 auto;
 }

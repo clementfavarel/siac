@@ -18,9 +18,11 @@ body {
     padding: 1rem;
     min-width: 245px;
     width: 100%;
-    aspect-ratio: 4/3;
     border: 2px solid #333;
     border-radius: 0.5rem;
+}
+.illustration {
+    margin-top: 3rem;
 }
 .data {
     display: flex;

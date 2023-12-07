@@ -25,7 +25,7 @@ include('../../../database/config/config.php');
                 <div class="box">
                     <h2>Utilisateurs</h2>
                     <div class="data">
-                        <img src="../../../assets/img/users-dark.svg" alt="Users" />
+                        <img class="illustration" src="../../../assets/img/users-dark.svg" alt="Users" />
                         <?php
                         $sql = "SELECT * FROM utilisateur";
                         $stmt = $db->prepare($sql);
@@ -40,7 +40,7 @@ include('../../../database/config/config.php');
                 <div class="box">
                     <h2>Utilisateurs</h2>
                     <div class="data">
-                        <img src="../../../assets/img/users-dark.svg" alt="Users" />
+                        <img class="illustration" src="../../../assets/img/users-dark.svg" alt="Users" />
                         <?php
                         $sql = "SELECT * FROM utilisateur";
                         $stmt = $db->prepare($sql);
@@ -57,7 +57,7 @@ include('../../../database/config/config.php');
                 <div class="box">
                     <h2>Utilisateurs</h2>
                     <div class="data">
-                        <img src="../../../assets/img/pen-tool-dark.svg" alt="Users" />
+                        <img class="illustration" src="../../../assets/img/pen-tool-dark.svg" alt="Users" />
                         <?php
                         $sql = "SELECT * FROM utilisateur";
                         $stmt = $db->prepare($sql);

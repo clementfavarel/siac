@@ -121,8 +121,8 @@ $stmt->execute();
 // connect the user
 session_start();
 $_SESSION['user'] = $db->lastInsertId();
-$_SESSION['firstname'] = $nom;
-$_SESSION['lastname'] = $prenom;
+$_SESSION['firstname'] = $prenom;
+$_SESSION['lastname'] = $nom;
 
 header("Location: ../../map?user_id=" . $_SESSION['user']);
 exit();
