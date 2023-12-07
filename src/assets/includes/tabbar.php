@@ -1,4 +1,4 @@
-<nav>
+ <nav>
     <div class="row">
         <div class="col">
             <img class="menu-icon" src="../../../assets/img/map.svg" alt="Map" />
@@ -22,13 +22,13 @@
 <style>
     nav {
         position: fixed;
-        width: 80%;
-        bottom: 16px;
+        width: 95%;
+        bottom: 10px;
         left: 50%;
         transform: translateX(-50%);
-        padding: .5rem 0;
+        padding: 0.2rem 0;
         background-color: #fff;
-        border-radius: 1.875rem;
+        border-radius: 25px;
     }
 
     .row {

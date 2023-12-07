@@ -1,0 +1,73 @@
+@import "../../../assets/css/global.css";
+
+body {
+    background: url("../../../assets/img/bg-landing.png") no-repeat;
+    background-size: cover;
+}
+
+.user-banner {
+    height: 10vh;
+    background: rgba(255, 255, 255, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+}
+
+.user-infos-section {
+    padding: 65px 0 0 20px;
+    color: #ffffff;
+
+}
+
+.infos-title {
+    border-left: 5px solid #ffffff; /* Remplacez "#ffffff" par la couleur de votre choix */
+    padding-left: 13px;
+}
+
+.user-infos {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.user-infos input {
+    height: 3rem;
+    border: none;
+    width: 100%;
+    display: flex;
+    margin-bottom: 0;
+    border-radius: 0 20px 20px 0;
+}
+
+.inputs {
+    border-radius: 0 20px 20px 0;
+    margin: 0 90px 18px 0;
+    background: #FFE09D;
+    height: 60px;
+}
+
+.first-input input {
+    border-radius: 0 20px 20px 0;
+}
+
+.disconnect {
+    margin-top: 10rem;
+
+}
+
+.disconnect button {
+    height: 3rem;
+    width: 90%;
+    border-radius: 0 20px 20px 0;
+    border: none;
+    background: #FFE09D;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.disconnect i {
+    font-size: 30px;
+}
