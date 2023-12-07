@@ -1,0 +1,36 @@
+body {
+    display: flex;
+}
+.container {
+    padding: 0.5rem 1rem;
+}
+.row {
+    max-width: 95dvw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.crop {
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+th,
+td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+th {
+    background-color: #4caf50;
+    color: white;
+}

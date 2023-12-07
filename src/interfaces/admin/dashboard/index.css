@@ -1,0 +1,46 @@
+html,
+body {
+    height: 100%;
+}
+body {
+    display: flex;
+}
+.dashboard {
+    padding: 0.5rem 1rem;
+    width: 100%;
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.box {
+    padding: 1rem;
+    min-width: 245px;
+    width: 100%;
+    aspect-ratio: 4/3;
+    border: 2px solid #333;
+    border-radius: 0.5rem;
+}
+.data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+}
+h2 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+h3 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+@media (min-width: 768px) {
+    .box {
+        min-width: 265px;
+    }
+}
