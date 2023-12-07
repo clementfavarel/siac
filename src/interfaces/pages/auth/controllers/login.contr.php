@@ -1,5 +1,5 @@
 <?php
-include_once('../../../database/config/config.php');
+include_once('../../../../database/config/config.php');
 
 function isEmailValid($email)
 {
@@ -11,7 +11,7 @@ function isPwdValid($pwd)
     return preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()\-_=+{};:,<.>§~]).{8,}$/', $pwd);
 }
 
-$requiredFields = ['email', 'pwd'];
+$requiredFields = ['email', 'mdp'];
 foreach ($requiredFields as $field) {
     if (empty($_POST[$field])) {
         header("Location: ../login.php?error=empty_fields");
@@ -24,13 +24,13 @@ if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
     exit();
 }
 
-if (!isPwdValid($_POST['pwd'])) {
+if (!isPwdValid($_POST['mdp'])) {
     header("Location: ../login.php?error=invalid_pwd");
     exit();
 }
 
 $email = $_POST['email'];
-$pwd = $_POST['pwd'];
+$pwd = $_POST['mdp'];
 
 $sql = "SELECT * FROM utilisateur WHERE email = :email";
 $stmt = $db->prepare($sql);
@@ -50,15 +50,15 @@ if (!password_verify($pwd, $user['mdp'])) {
 
 // connect the user
 session_start();
-$_SESSION['user'] = $db->lastInsertId();
 
 // get user info
-$sql = "SELECT * FROM utilisateur WHERE id = :id";
+$sql = "SELECT * FROM utilisateur WHERE email = :email";
 $stmt = $db->prepare($sql);
-$stmt->bindParam(':id', $_SESSION['user']);
+$stmt->bindParam(':email', $email);
 $stmt->execute();
 $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
+$_SESSION['user'] = $user['id'];
 $_SESSION['firstname'] = $user['prenom'];
 $_SESSION['lastname'] = $user['nom'];
 
