@@ -13,24 +13,25 @@ if (isset($_SESSION['user'])) {
     <?php include('../../../assets/includes/head.php'); ?>
     <title>Connexion | Mapollon</title>
     <link rel="stylesheet" href="../../../assets/css/global.css" />
-    <link rel="stylesheet" href="./assets/css/auth.css" />
+    <link rel="stylesheet" href="assets/css/auth.css" />
+    <link rel="stylesheet" href="assets/css/register.css" />
 </head>
 
 <body>
-    <div class="container">
-        <h1>Connexion</h1>
-        <form action="controllers/login.contr.php" method="post">
-            <div class="input-group">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" />
-            </div>
-            <div class="input-group">
-                <label for="mdp">Mot de passe</label>
-                <input type="password" name="mdp" id="mdp" />
-            </div>
-            <input class="btn primary center" type="submit" value="Se connecter" />
-        </form>
-    </div>
+<div class="container">
+    <h1>Connexion</h1>
+    <form action="controllers/login.contr.php" method="post">
+        <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+        </div>
+        <div class="input-group">
+            <label for="mdp">Mot de passe</label>
+            <input type="password" name="mdp" id="mdp" />
+        </div>
+        <input class="btn primary center" type="submit" value="Se connecter" />
+    </form>
+</div>
 </body>
 
 </html>

@@ -58,9 +58,24 @@ $result = $stmt->fetch(PDO::FETCH_ASSOC);
 </div>
 
 <div class="disconnect">
-    <button><i class="bi bi-power"></i>Se déconnecter</button>
+    <button id="logout-btn"><i class="bi bi-power"></i>Se déconnecter</button>
 </div>
 
+<script>
+    document.getElementById("logout-btn").addEventListener("click", function() {
+        // Envoyer une requête AJAX pour déconnecter la session
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "../auth/controllers/logout.contr.php", true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                // Rediriger l'utilisateur vers la page de connexion après la déconnexion
+                window.location.href = "../auth/login.php";
+            }
+        };
+        xhr.send();
+    });
+</script>
 </body>
+
 
 </html>
